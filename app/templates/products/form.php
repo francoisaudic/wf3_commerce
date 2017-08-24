@@ -17,9 +17,9 @@
 
         <div>
             <label for="price">Prix du Produit</label>
-            <input type="" id="price" name="price" value="<?= $price ?>">
+            <input type="text" id="price" name="price" value="<?= $price ?>">
         </div>
 
         <button type="submit" name="button">Envoi</button>
 
-    </form>
+</form>

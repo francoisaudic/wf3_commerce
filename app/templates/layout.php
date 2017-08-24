@@ -9,6 +9,7 @@
 <body>
 	<div class="container">
 		<header>
+			<?php include 'navigation.php'; ?>
 			<h1>W :: <?= $this->e($title) ?></h1>
 		</header>
 

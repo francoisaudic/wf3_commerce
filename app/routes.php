@@ -2,7 +2,7 @@
 	
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'home'],
-		['GET|POST', '/contact', 'Default#contact', 'contact'],
+		['GET|POST', '/contactez-nous', 'Default#contact', 'contact'],
 
 		['GET', '/products', 'Products#index', 'products_index'],
 		['GET|POST', '/product/create', 'Products#create', 'product_create'],
