@@ -3,24 +3,24 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use \Manager\ProductsManager;
+use \Manager\ArticlesManager;
 
-class ProductsController extends Controller
+class ArticlesController extends Controller
 {
-    private $productsManager;
+    private $articlesManager;
 
     public function __construct()
     {
-        $this->productsManager = new ProductsManager;
+        $this->articlesManager = new ArticlesManager;
     }
 
     public function index()
 	{
-        $products = $this->productsManager->findAll();
+        $articles = $this->articlesManager->findAll();
 
-		$this->show('products/index', [
+		$this->show('articles/index', [
             "title" => "Liste des Produits",
-            "products" => $products,
+            "articles" => $articles,
         ]);
     }
     
@@ -46,9 +46,9 @@ class ProductsController extends Controller
             // Enregistre en BDD
             if ($save) {
 
-                $products = $this->productsManager;
+                $articles = $this->articlesManager;
 
-                $product = $products->insert([
+                $product = $articles->insert([
                     "name" => $name,
                     "description" => $description,
                     "image" => $image,
@@ -65,7 +65,7 @@ class ProductsController extends Controller
             }
         }
 
-		$this->show('products/create', [
+		$this->show('articles/create', [
             "title" => "Ajouter un produit",
             "name" => $name,
             "description" => $description,
@@ -76,11 +76,11 @@ class ProductsController extends Controller
 
     public function read($id)
 	{
-        $products = $this->productsManager;
+        $articles = $this->articlesManager;
 
-        $product = $products->find($id);
+        $product = $articles->find($id);
 
-		$this->show('products/read', [
+		$this->show('articles/read', [
             "title" => "Info d'un produit",
             'id' => $product['id'],
             "name" => $product['name'],
@@ -92,9 +92,9 @@ class ProductsController extends Controller
 
     public function update($id)
 	{
-        $products = $this->productsManager;
+        $articles = $this->articlesManager;
         
-        $product = $products->find($id);
+        $product = $articles->find($id);
 
         if ( $_SERVER['REQUEST_METHOD'] === "POST" ) {
 
@@ -111,9 +111,9 @@ class ProductsController extends Controller
             // Enregistre en BDD
             if ($save) {
 
-                $products = $this->productsManager;
+                $articles = $this->articlesManager;
 
-                $product = $products->update([
+                $product = $articles->update([
                     "name" => $name,
                     "description" => $description,
                     "image" => $image,
@@ -130,7 +130,7 @@ class ProductsController extends Controller
             }
         }
 
-		$this->show('products/update', [
+		$this->show('articles/update', [
             "title" => "Modifier : ".$product['name'],
             "name" => $product['name'],
             "description" => $product['description'],
@@ -141,16 +141,16 @@ class ProductsController extends Controller
 
     public function delete($id)
 	{
-        $products = $this->productsManager;
+        $articles = $this->articlesManager;
         
-        $product = $products->find($id);
+        $product = $articles->find($id);
 
         if ( $_SERVER['REQUEST_METHOD'] === "POST" ) {
-            $this->productsManager->delete($id);
-            $this->redirectToRoute('products_index');
+            $this->articlesManager->delete($id);
+            $this->redirectToRoute('articles_index');
         }
 
-		$this->show('products/delete', [
+		$this->show('articles/delete', [
             "title" => "Suppression du produit :".$product['name'],
             "product" => $product,
         ]);
