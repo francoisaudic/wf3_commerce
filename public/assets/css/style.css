@@ -24,3 +24,14 @@ h1 {
 h2 {
 	color: #66D9EF;
 }
+
+.btn-pink {
+	background-color: pink;
+	border-color: pink;
+	color:white;
+}
+
+input, textarea {
+	color : #333 !important;
+	margin : 1% 0;
+}

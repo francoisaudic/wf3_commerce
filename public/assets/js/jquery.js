@@ -1,0 +1,1 @@
+C:/xampp/htdocs/wf3_commerce/vendor/bower_components/jquery/dist/jquery.js

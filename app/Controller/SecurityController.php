@@ -71,7 +71,10 @@ class SecurityController extends Controller
             }
 
             // Cryptage du MDP
-            // ...
+            else
+            {
+                $password = password_hash($password, PASSWORD_DEFAULT);           
+            }
 
 
             if ( $save )

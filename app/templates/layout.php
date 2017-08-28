@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
 
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
@@ -20,5 +21,8 @@
 		<footer>
 		</footer>
 	</div>
+
+	<script src="<?= $this->assetUrl('js/jquery.js') ?>" charset="utf-8"></script>
+	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>" charset="utf-8"></script>
 </body>
 </html>

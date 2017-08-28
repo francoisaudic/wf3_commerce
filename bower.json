@@ -1,0 +1,22 @@
+{
+  "name": "wf3_commerce",
+  "homepage": "https://github.com/francoisaudic/wf3_commerce",
+  "authors": [
+    "francoisaudic <audicfrancois@hotmail.fr>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
