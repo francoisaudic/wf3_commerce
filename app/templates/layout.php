@@ -19,10 +19,12 @@
 		</section>
 
 		<footer>
+			Copyright 2017...
 		</footer>
 	</div>
 
 	<script src="<?= $this->assetUrl('js/jquery.js') ?>" charset="utf-8"></script>
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>" charset="utf-8"></script>
+	<?= $this->section('main_script') ?>
 </body>
 </html>

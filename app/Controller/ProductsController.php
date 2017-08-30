@@ -155,4 +155,10 @@ class ProductsController extends Controller
             "product" => $product,
         ]);
     }
+
+    public function ajaxIndex()
+    {
+        $data = $this->productsManager->findAll();
+        $this->showJson($data);
+    }
 }
